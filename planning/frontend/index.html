@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="../../img/favicon.ico" rel="shortcut icon"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<title>Frontend - ytsp0300-3004 Frontend for NDVI demo for agriculture</title>
+<link href="../../css/bootstrap-3.3.7.min.css" rel="stylesheet"/>
+<link href="../../css/font-awesome-4.7.0.css" rel="stylesheet"/>
+<link href="../../css/base.css" rel="stylesheet"/>
+<link href="../../css/highlight.css" rel="stylesheet"/>
+<link href="../../style.css" rel="stylesheet"/>
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+<script src="../../js/jquery-3.2.1.min.js"></script>
+<script src="../../js/bootstrap-3.3.7.min.js"></script>
+<script src="../../js/highlight.pack.js"></script>
+<base target="_top"/>
+<script>
+      var base_url = '../..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+          {title: "In general/introducion", url: "#_top", children: [
+          ]},
+          {title: "Actually test database contains all AOI in the system, NDVI database will include all NDVI-imagedata of specifig time/date perioid for all AOI.", url: "#actually-test-database-contains-all-aoi-in-the-system-ndvi-database-will-include-all-ndvi-imagedata-of-specifig-timedate-perioid-for-all-aoi", children: [
+          ]},
+          {title: "Choosing UI framework", url: "#choosing-ui-framework", children: [
+          ]},
+          {title: "Components", url: "#components", children: [
+          ]},
+          {title: "k\u00e4sittelit\u00e4 ja tekniikoita", url: "#kasittelita-ja-tekniikoita", children: [
+          ]},
+          {title: "T\u00c4M\u00c4", url: "#tama", children: [
+          ]},
+        ];
+
+    </script>
+<script src="../../js/base.js"></script>
+</meta></head>
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+<div class="container-fluid wm-page-content">
+<a name="_top"></a>
+<p>Fo demo use there is limit on sentinel-hub so part of data is already indserted ntodatabase using tools of demo app.
+tools nd test are not documented for this report assignment.</p>
+<p>Vois olla imagesa date kenttä ja uuid!!!!</p>
+<p>ref.current width???  </p>
+<p>At this point navbar is in app level not own component</p>
+<p>UI i base on Bootstrap grid system.
+garousel and scale is bend together with Stack element.</p>
+<p>COMPARE years, the dytes/values every years are not the same mostly depending on wether conditions.
+So every date is postionet to same x-axis for the chart.</p>
+<p>Korjaa respositiivisuus!!!</p>
+<p>513Mb rajoitus tuli eteen mongossa</p>
+<p>This is a part of the MERN stack.
+usea ikkuna jaeettu oikalla mesta esim. 4 osaako skaalata samaan aikaan 4 peltoa</p>
+<p>tools and test has various functions</p>
+<p>I techonology 
+is used multiple custom hooks for fetchoing data from the web sources</p>
+<p>ilmeisesti etttei tarvii buttonia erikseen
+https://www.npmjs.com/package/react-bootstrap-icons</p>
+<p>Documenting afterwards is peretty challengingh and not very motivating.
+So I used AI to help. All the code and the documentation has been checked out and proved to be correct.</p>
+<h3 id="admin">Admin</h3>
+<p>impropiert use is restricted in UI and ofcourse especially in server side. 
+Now not shown in UI, needs authentication and gettiing token to trnasfer communicate with backend server  </p>
+<h3 id="packagejson">Package.json</h3>
+<p>mainitse kunkin kohdalla mhdollinen simerkki
+esim. 
+leaflet screenpicture On map ja location
+plotly statistics yms.
+react-film  Offcanvas
+Bootstap carousel valikot yms.</p>
+<h4 id="3rd-party-components">3rd party components</h4>
+<p>Mostly components have nto function options/behavious needed, so
+got to do my self the modifications additons needee.
+So are very cahllengin to achieve.
+May need html and css tricks.</p>
+<p>UI/UX
+should fdefine breakpoisnt and or grid system of bootsrap to fit and postionin elemenst for different size of   viewports.
+it's pretty challengin to make dynamic user interface.
+should focus more in the future</p>
+<h2 id="in-generalintroducion">In general/introducion</h2>
+<p>This is frontend for the backend, which is done/impelemented for<br/>
+<em>Data Modelling and Back-end Development, YTSP0200-3004</em></p>
+<p>The app show the NDVI images fo the specifig area of interest, plants fields in range of dates of few years for the growing season to the harvest.</p>
+<pre><code>- App
+  - Navbar
+  - Demo Tools Tests
+    - Demo
+      - NDVIdata
+      - NDVIcontrols
+      - ActionBar
+        - Chart
+        - Statistics
+        - CompareYears
+        - OnMap
+        - Location
+        - Weather
+    - BottomBar
+
+</code></pre>
+<pre><code>App
+└── Navbar
+    └── Demo Tools Tests
+        ├── NDVI-image &amp; data
+        ├── NDVIcontrols
+        ├── ActionBar
+        │   ├── Chart
+        │   ├── Statistics
+        │   ├── CompareYears
+        │   ├── OnMap
+        │   ├── Location 
+        │   └── Weather
+        └── BottomBar
+</code></pre>
+<h3 id="introdution-of-the-application">introdution of the application</h3>
+<h4 id="register">register</h4>
+<h3 id="about-the-assignment">about the assignment</h3>
+<h5 id="state-management">state management</h5>
+<p>It was near to use another state management but usestate, Context Redux...</p>
+<h3 id="statistics">statistics</h3>
+<p>two or bi-directional behavioir so active geometry is set by the form rowsor another controller to 
+form will react any changes so the row for active geometry is selecnpm startted</p>
+<h3 id="connections">connections:</h3>
+<p>login/registration to server, getting the token
+getting data database/sentinelhub by (server) having token</p>
+<p>leaflet
+weather opneweatherapp</p>
+<h3 id="layout">LAYOUT</h3>
+<p>div for statsitic position content has a ref and the last row is for content changeig woith the topic</p>
+<p>Voisiko jotenkin devops muutenkin kuin pipeline hyödyntää esim. diary no mkdocs</p>
+<p>jostakin skaala arvot on varmaankin serverillä niistä pitäis värikoodi antaa statisticks.js:lle
+samalla tuo värikoodi-taulukko barchartille
+VINKKI ekassa demossa on käytetty eri värejä linechartin markerissa!!!</p>
+<hr/>
+<p>if (val&lt;0.30) imgVals = [0.9568627450980393, 0.2627450980392157, 0.21176470588235294,samples.dataMask];
+          else if (val&lt;0.45) imgVals = [1.0, 0.596078431372549, 0.0,samples.dataMask];                      <br/>
+          else if (val&lt;0.60) imgVals = [1.0, 0.9215686274509803, 0.23137254901960785,samples.dataMask];
+          else if (val&lt;0.65) imgVals = [0.31,0.54,0.18,samples.dataMask];
+          else if (val&lt;0.70) imgVals = [0.25,0.49,0.14,samples.dataMask];
+          else if (val&lt;0.75) imgVals = [0.19,0.43,0.11,samples.dataMask];
+          else if (val&lt;0.80) imgVals = [0.13,0.38,0.07,samples.dataMask];
+          else if (val&lt;0.85) imgVals = [0.06,0.33,0.04,samples.dataMask];
+          else imgVals = [0,0.27,0,samples.dataMask];  </p>
+<pre><code>    let colors = y.map((val, i) =&gt; {
+      console.log("val ", val);
+      if (val &gt;= 0.15 &amp;&amp; val &lt; 0.3)
+        return [
+          0.9568627450980393, 0.2627450980392157, 0.21176470588235294,
+        ];
+      else if (val &lt; 0.45) return [1.0, 0.596078431372549, 0.0];
+      else if (val &lt; 0.6)
+        return [1.0, 0.9215686274509803, 0.23137254901960785];
+      else if (val &gt;= 0.6)
+        return [0.2980392156862745, 0.6862745098039216, 0.3137254901960784];
+      else return [];
+    });
+
+    colors = colors.map((color, i) =&gt; {
+      return "rgb(" + color.map((val) =&gt; Math.round(val * 255)) + ")";
+    });
+
+    console.log("colorsxxx     ", colors);
+</code></pre>
+<p>scale.js (server)</p>
+<p>let template=[
+    {
+        color: 'rgb(244, 67, 54)',
+        amount: 0,
+        from: 0.15
+    },
+    {
+        color: 'rgb(255, 152, 0)',
+        amount: 0,
+        from: 0.3
+    },
+    {
+        color: 'rgb(255, 235, 59)',
+        amount: 0,
+        from: 0.45
+    },
+    {
+        color: 'rgb(76, 175, 80)',
+        amount: 0,
+        from: 0.6
+    }
+]</p>
+<p>module.exports = {
+    template,
+  };</p>
+<hr/>
+<p>HUOM  <strong>!important</strong> to overridedefault style property
+the size modification  by changing the font size
+font-size: 0.875 rem;</p>
+<p>.actionbar .nav-link {
+  color: #FF00AA !important;
+  font-size: 0.875 rem;
+}</p>
+<p>.actionbar .nav-link.active {
+  background-color: #1d8f32 !important;
+  color: #FFFFFF !important;
+}</p>
+<hr/>
+<p>for some components Parent element will give e.g. color size</p>
+<p>UI &amp; UX is made by React Bootstrap using layout grid "system".</p>
+<p>touchscreen like mobile and tablet devices</p>
+<p>HUOM;
+row elementill
+ on show porperty joten ei tarvii conditional rendering ulkopuolisia viristyksiä!!!
+esim.
+<row show="{dates.length"> 0} className="justify-content-left mt-4"&gt;</row></p>
+<p>nav- setGeometry
+demo(geometry) </p>
+<p>Hierarchy of the App /levels /pages of ths STACK</p>
+<pre><code>App/
+└── Demo/
+    ├── NDVI
+    ├── Stats
+    ├── Location
+    └── Weather
+├── Tests
+└── Tools
+</code></pre>
+<p>const { imageData, loading, error } = useImageRequest(url, imageId,config);</p>
+<hr/>
+<p>In this demo the database in server is empty, so the data is not driven before actual use which 
+is a common way in real world. But total performance time is actially could be short enough so not disturb the use with delay.</p>
+<h3 id="tekkaa">tekkaa</h3>
+<p>https://www.npmjs.com/package/react-image-gallery</p>
+<p>https://linxtion.com/demo/react-image-gallery/</p>
+<p>selectin NDVi-image data by image-film, dropdown, lef/righr arrows swapping, autoplay   </p>
+<h2 id="actually-test-database-contains-all-aoi-in-the-system-ndvi-database-will-include-all-ndvi-imagedata-of-specifig-timedate-perioid-for-all-aoi">Actually test database contains all AOI in the system, NDVI database will include all NDVI-imagedata of specifig time/date perioid for all AOI.</h2>
+<p>Contorlling and montoring all the AOI on the system. Posisble to make data analysess in generel considering all the AOIs on the system.
+StadardDeviation is for se if the growth is steady tasaista, this is seen also in te NDVI image ofin visual. the closer the value is to zero, the more steady the growth.</p>
+<h2 id="choosing-ui-framework">Choosing UI framework</h2>
+<h3 id="mui">MUI</h3>
+<p>https://mui.com/</p>
+<p>https://refine.dev/blog/material-ui-autocomplete-component/#introduction</p>
+<h3 id="ant">ANT</h3>
+<p>https://ant.design/</p>
+<h3 id="bootstrap">Bootstrap</h3>
+<p>Frontend is demo, testing and data manipulating tool.
+- separate calls to backend if special needs are needed.
+- testings esimerkkejä tähän.  </p>
+<p>Voisi olla monitotinti SOCKET yhteys päivitystestiin eli simuloinit että on useita peltosettejä.</p>
+<p>Navbar tsekkaa Peltomäelle tehty juttu!!! ota materiaalilinkit talteen1!!!</p>
+<p>voisiko käyttää jotenkin danfo.js!!! stsistiikkaa ja data-analyysejä mm. lasketaan keskiarvoja yms. mena, min, max, std
+https://www.npmjs.com/package/danfojs</p>
+<h1 id="components">Components</h1>
+<p>Filmroll/Carousel
+https://www.npmjs.com/package/react-film
+https://spyip.github.io/react-film/
+https://github.com/spyip/react-film?tab=readme-ov-file</p>
+<p>leaflet:
+imagessa on koodinaatit ei tarvitse siis laskea uudelleen bboxia mutta alkuun 
+laske ja vertaa!!!!</p>
+<p>SElvitä customhookit ja miksi niitä käytetään
+HUOM: fullstack open!!!!
+https://fullstackopen.com/osa7/custom_hookit#hookit</p>
+<p>useField
+D:\fullstackopen2022\part7\country-hook-main77</p>
+<p>FULLSTACK
+In this work frontend is located in the same server than backend
+build folder voisi oilla jokin muukin tsekkaa kuinka ja mihin määritellään!!!!</p>
+<p>FRONTENDISTÄ oma hakimisto johion eri osat mm. paget ja components
+GRAAFI valinta vuodella sekä avg max min -valinta mitä piirretään
+sekä mode pylväs tai linechart</p>
+<p>This fronend is made for React framework
+and is for backend which I made for the course xxx 
+so frontend for MERN fullstack
+responsitiivisuus huomioitava myös mobil käyttö 
+näytä sovellus videolla myös kännykässä emulaattorissa</p>
+<p>TEE auto play kuten eikoissa demoissa kontrollit estetty muut kuin paly/pause</p>
+<p>I dedicated to test and develop purpose for backend</p>
+<p>REDUX??
+JOKIN TOINEN KUIN BOOTSTRAP</p>
+<p>liää graafiin valinta min, max, mean, std standard deviation
+mahdollisesti kaikki samaan graafiin mjutta tuleeko pylväsdiagramiissa ongelmia</p>
+<p>this frontend takes contact to backend which has been mede for coursewordk assignment xxx</p>
+<p>tähän API kuvaus backendistä ja siis routet ja endpointit ja mitä parameterajk sisään ja mitä saadaa requestin tuloksena</p>
+<h3 id="react-ui-component-libraries">React UI Component Libraries</h3>
+<p>Ther eis lot of good choices. In this work I used Bootstrap but changed it to Semantic, why just get to know better alternatives.
+Compare if can...</p>
+<p>esim.</p>
+<p>https://npm.io/package/react-bootstrap</p>
+<p>https://www.npmjs.com/package/semantic-ui-react</p>
+<p>https://npm.io/package/semantic-ui-react</p>
+<h1 id="kasittelita-ja-tekniikoita">käsittelitä ja tekniikoita</h1>
+<p>custom hook esimerkki fetchImage!!!!</p>
+<p>image vois hakea kaikki imaget yhdellä haulla pitöisi nyt olla
+niin että dates pitä siällään nuo imageid:eet niin voisiko 
+kuitenkin käyttää geometrian sha256-mutoa ja hakea kannasta kaikki kerralla contains
+filmirulla tarvii kaikki kuvat valitulta vuodelta!!!
+mutta normaalisti haetaan vain yjsi kuva kerrallaan sii mitä</p>
+<h3 id="carousel-for-ndvi-images">carousel for NDVI-images</h3>
+<p>can be swapped especially handy for touch screeen e.g. mobile ussers phones and tablets</p>
+<p>"@turf/bbox": "^6.5.0",
+    "axios": "^1.4.0",
+    "bootstrap": "^5.2.3",
+    "plotly.js": "^2.24.3",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.7.4",
+    "react-bootstrap-icons": "^1.10.3",
+    "react-dom": "^18.2.0",
+    "react-film": "^3.1.0",
+    "react-leaflet": "^4.2.1",
+    "react-plotly.js": "^2.6.0",
+    "react-router-dom": "^6.11.0",
+    "react-scripts": "5.0.1",</p>
+<p>Muista bootstrap css sekä icons sekä react-bootstrap ja bootstrap</p>
+<pre><code>{
+  "name": "ndvi_processing",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@appigram/react-rangeslider": "^2.2.21",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@turf/bbox": "^6.5.0",
+    "axios": "^1.4.0",
+    "bootstrap": "^5.2.3",
+    "dotenv": "^16.4.5",
+    "plotly.js": "^2.24.3",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.7.4",
+    "react-bootstrap-icons": "^1.10.3",
+    "react-dom": "^18.2.0",
+    "react-film": "^3.1.0",
+    "react-leaflet": "^4.2.1",
+    "react-leaflet-fullscreen": "^4.1.1",
+    "react-plotly.js": "^2.6.0",
+    "react-router-dom": "^6.11.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      "&gt;0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+  }
+}
+</code></pre>
+<h3 id="slider">SLIDER</h3>
+<p>https://www.npmjs.com/package/react-bootstrap-range-slider
+ <code>npm i react-bootstrap-range-slider</code></p>
+<p>https://jaywilz.github.io/react-bootstrap-range-slider/</p>
+<p>### käytä tätä</p>
+<p>https://www.npmjs.com/package/rc-slider
+<code>npm i rc-slider</code></p>
+<p>https://slider-react-component.vercel.app/</p>
+<h1 id="tama">TÄMÄ</h1>
+<p>https://whoisandy.github.io/react-rangeslider/</p>
+<p>https://www.npmjs.com/package/@appigram/react-rangeslider
+<code>npm i @appigram/react-rangeslider</code></p>
+<p>https://www.npmjs.com/package/react-plotly.js
+<code>npm install react-plotly.js plotly.js</code></p>
+<p><code>npm install axios axios-hooks</code></p>
+<h4 id="fullscreencontrol-for-react-leaflet">FullscreenControl for react-leaflet</h4>
+<p>https://www.npmjs.com/package/react-leaflet-fullscreen
+<code>npm i react-leaflet-fullscreen</code></p>
+<p>very easy to use</p>
+<p>Login 
+Token täytyy olla ehtona käyttöliittymän valintoihin 
+eli jos ei ole valid token niin vain login button näkyy</p>
+<p>talletetaan token storageen, määritetään expiration time
+mutta kuinka tuo storage hoidetaan eli ei tarvii kirjautua joka kerta kun browseriin syötetän url
+mutta kun token menee vanhaksi niin kuinka tsekataan ja kuinka uusitaan olisiko näin että kun ei käytetän niin menee vanhaksi tietyn ajan jälkeen muuten on eloissa ja uusitaan aina kun tehdään kutsu tai tietyin aikavälein????</p>
+<p>LoginDialog
+loginForm TEE erikseen joten
+registryForm</p>
+<p>navigationBar -&gt; imnaksi komponentikseen!!!!</p>
+<p>services-&gt; kaikki ulkomaailman jutut nyt siellä vastause-service  </p>
+<p>selvitä baseUrl App.js:n alussa
+local to local server
+local to azure server
+azure to </p>
+<p>voiko tokenista jos vaan sen palauttaa kaivaa esiin käyttäjä tiedot?</p>
+<p>App.js</p>
+<p>const getConfig = () =&gt; {
+    let _token = <code>bearer ${token}</code>;
+    const config = {
+      headers: { Authorization: _token },
+    };</p>
+<pre><code>return config;
+</code></pre>
+<p>};</p>
+<p>getConfig() välitetään kaikille sivuille
+Tests sivulla on esimerkki:
+  {page === "Tests" &amp;&amp; <tests baseurl="{baseUrl}" config="{getConfig()}" geometry="{geometry}"></tests>}</p>
+<p>fetching current weather should be defined at frontend if
+  refreshing is enabled</p>
+<hr/>
+<p>getDates</p>
+<h3 id="demojs">Demo.js</h3>
+<p>getAllImages for the geometry</p>
+<p>import useImageRequest from "../hooks/useImageRequest";
+setImageId(selectedDate.sentinelid);</p>
+<p>const { imageData, loading, error } = useImageRequest(url, imageId,config);
+    let res = await axios.get(url + imageId,{params,...config});
+    config includes the token</p>
+<p>const params = { all: true };</p>
+<br/>
+</div>
+<footer class="container-fluid wm-page-content">
+<p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+<script>
+            window.update_swagger_ui_iframe_height = function (id) {
+                var iFrameID = document.getElementById(id);
+                if (iFrameID) {
+                    full_height = (iFrameID.contentWindow.document.body.scrollHeight + 80) + "px";
+                    iFrameID.height = full_height;
+                    iFrameID.style.height = full_height;
+                }
+            }
+        
+            let iframe_id_list = []
+            var iframes = document.getElementsByClassName("swagger-ui-iframe");
+            for (var i = 0; i < iframes.length; i++) { 
+                iframe_id_list.push(iframes[i].getAttribute("id"))
+            }
+        
+            let ticking = true;
+            
+            document.addEventListener('scroll', function(e) {
+                if (!ticking) {
+                    window.requestAnimationFrame(()=> {
+                        let half_vh = window.innerHeight/2;
+                        for(var i = 0; i < iframe_id_list.length; i++) {
+                            let element = document.getElementById(iframe_id_list[i])
+                            if(element==null){
+                                return
+                            }
+                            let diff = element.getBoundingClientRect().top
+                            if(element.contentWindow.update_top_val){
+                                element.contentWindow.update_top_val(half_vh - diff)
+                            }
+                        }
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+        </script></body>
+</html>

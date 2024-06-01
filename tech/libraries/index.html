@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="../../img/favicon.ico" rel="shortcut icon"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<title>Libraries - ytsp0300-3004 Frontend for NDVI demo for agriculture</title>
+<link href="../../css/bootstrap-3.3.7.min.css" rel="stylesheet"/>
+<link href="../../css/font-awesome-4.7.0.css" rel="stylesheet"/>
+<link href="../../css/base.css" rel="stylesheet"/>
+<link href="../../css/highlight.css" rel="stylesheet"/>
+<link href="../../style.css" rel="stylesheet"/>
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+<script src="../../js/jquery-3.2.1.min.js"></script>
+<script src="../../js/bootstrap-3.3.7.min.js"></script>
+<script src="../../js/highlight.pack.js"></script>
+<base target="_top"/>
+<script>
+      var base_url = '../..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+        ];
+
+    </script>
+<script src="../../js/base.js"></script>
+</meta></head>
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+<div class="container-fluid wm-page-content">
+<a name="_top"></a>
+<pre><code>{
+    "@appigram/react-rangeslider": "^2.2.22",    
+    "@turf/bbox": "^6.5.0",
+    "axios": "^1.6.8",
+    "bootstrap": "^5.3.3",
+    "dotenv": "^16.4.5",
+    "plotly.js": "^2.32.0",
+    "react-bootstrap": "^2.10.2",
+    "react-bootstrap-icons": "^1.11.4",
+    "react-film": "^3.1.0",
+    "react-leaflet": "^4.2.1",
+    "react-leaflet-fullscreen": "^4.1.1",
+    "react-plotly.js": "^2.6.0",
+}
+</code></pre>
+<h3 id="slider">Slider</h3>
+<p><a href="https://www.npmjs.com/package/@appigram/react-rangeslider" target="_blank">https://www.npmjs.com/package/@appigram/react-rangeslider</a></p>
+<p><code>npm i @appigram/react-rangeslider</code></p>
+<h3 id="turfbbox">@turf/bbox</h3>
+<p>Takes a set of features, calculates the bbox of all input features, and returns a bounding box.</p>
+<p><a href="https://www.npmjs.com/package/@turf/bbox" target="_blank">https://www.npmjs.com/package/@turf/bbox</a></p>
+<p><code>npm i @turf/bbox</code></p>
+<h3 id="axios">Axios</h3>
+<p>Promise based HTTP client for the browser and node.js</p>
+<p><a href="https://www.npmjs.com/package/axios" target="_blank">https://www.npmjs.com/package/axios</a></p>
+<p><code>npm i axios</code></p>
+<h3 id="react-bootstrap">React-bootstrap</h3>
+<p>UI &amp; UX</p>
+<p><a href="https://www.npmjs.com/package/react-bootstrap" target="_blank">https://www.npmjs.com/package/react-bootstrap</a></p>
+<p><code>npm i react-bootstrap bootstrap</code></p>
+<h3 id="react-bootstrap-icons">React-bootstrap-icons</h3>
+<p><a href="https://www.npmjs.com/package/react-bootstrap-icons" target="_blank">https://www.npmjs.com/package/react-bootstrap-icons</a></p>
+<p><code>npm i react-bootstrap-icons</code></p>
+<h3 id="react-film">React-film</h3>
+<p>Showing carousel just like a film strip</p>
+<p><a href="https://www.npmjs.com/package/react-film" target="_blank">https://www.npmjs.com/package/react-film</a></p>
+<p><code>npm i react-film</code></p>
+<h3 id="react-leaflet">React-leaflet</h3>
+<p>Maps</p>
+<p><a href="https://www.npmjs.com/package/react-leaflet" target="_blank">https://www.npmjs.com/package/react-leaflet</a></p>
+<p><code>npm i react-leaflet</code></p>
+<h3 id="fullscreencontrol-for-react-leaflet">FullscreenControl for react-leaflet</h3>
+<p><a href="https://www.npmjs.com/package/react-leaflet-fullscreen" target="_blank">https://www.npmjs.com/package/react-leaflet-fullscreen</a></p>
+<p><code>npm i react-leaflet-fullscreen</code></p>
+<h3 id="plotly">Plotly</h3>
+<p>Charts
+<a href="https://www.npmjs.com/package/react-plotly.js" target="_blank">https://www.npmjs.com/package/react-plotly.js</a></p>
+<p><code>npm i react-plotly.js plotly.js</code></p>
+<br/>
+</div>
+<footer class="container-fluid wm-page-content">
+<p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+<script>
+            window.update_swagger_ui_iframe_height = function (id) {
+                var iFrameID = document.getElementById(id);
+                if (iFrameID) {
+                    full_height = (iFrameID.contentWindow.document.body.scrollHeight + 80) + "px";
+                    iFrameID.height = full_height;
+                    iFrameID.style.height = full_height;
+                }
+            }
+        
+            let iframe_id_list = []
+            var iframes = document.getElementsByClassName("swagger-ui-iframe");
+            for (var i = 0; i < iframes.length; i++) { 
+                iframe_id_list.push(iframes[i].getAttribute("id"))
+            }
+        
+            let ticking = true;
+            
+            document.addEventListener('scroll', function(e) {
+                if (!ticking) {
+                    window.requestAnimationFrame(()=> {
+                        let half_vh = window.innerHeight/2;
+                        for(var i = 0; i < iframe_id_list.length; i++) {
+                            let element = document.getElementById(iframe_id_list[i])
+                            if(element==null){
+                                return
+                            }
+                            let diff = element.getBoundingClientRect().top
+                            if(element.contentWindow.update_top_val){
+                                element.contentWindow.update_top_val(half_vh - diff)
+                            }
+                        }
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+        </script></body>
+</html>

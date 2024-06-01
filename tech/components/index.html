@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="../../img/favicon.ico" rel="shortcut icon"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<title>Components - ytsp0300-3004 Frontend for NDVI demo for agriculture</title>
+<link href="../../css/bootstrap-3.3.7.min.css" rel="stylesheet"/>
+<link href="../../css/font-awesome-4.7.0.css" rel="stylesheet"/>
+<link href="../../css/base.css" rel="stylesheet"/>
+<link href="../../css/highlight.css" rel="stylesheet"/>
+<link href="../../style.css" rel="stylesheet"/>
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+<script src="../../js/jquery-3.2.1.min.js"></script>
+<script src="../../js/bootstrap-3.3.7.min.js"></script>
+<script src="../../js/highlight.pack.js"></script>
+<base target="_top"/>
+<script>
+      var base_url = '../..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+          {title: "ActionBar.js", url: "#_top", children: [
+          ]},
+          {title: "BarGraph.js", url: "#bargraphjs", children: [
+          ]},
+          {title: "BGimage.js", url: "#bgimagejs", children: [
+          ]},
+          {title: "Carousel.js", url: "#carouseljs", children: [
+          ]},
+          {title: "Confirmmodal.js", url: "#confirmmodaljs", children: [
+          ]},
+          {title: "CumulativePrecipitationGraph.js", url: "#cumulativeprecipitationgraphjs", children: [
+          ]},
+          {title: "CumulativeTemperatureGraph.js", url: "#cumulativetemperaturegraphjs", children: [
+          ]},
+          {title: "DataChart.js", url: "#datachartjs", children: [
+          ]},
+          {title: "LineGraph.js", url: "#linegraphjs", children: [
+          ]},
+          {title: "MySlider.js", url: "#mysliderjs", children: [
+          ]},
+          {title: "NDVIFilm.js", url: "#ndvifilmjs", children: [
+          ]},
+          {title: "NDVIValuesTable.js", url: "#ndvivaluestablejs", children: [
+          ]},
+          {title: "OffCanvas.js", url: "#offcanvasjs", children: [
+          ]},
+          {title: "OnProgressModal.js", url: "#onprogressmodaljs", children: [
+          ]},
+          {title: "Scale.js", url: "#scalejs", children: [
+          ]},
+          {title: "ToastMsg.js", url: "#toastmsgjs", children: [
+          ]},
+        ];
+
+    </script>
+<script src="../../js/base.js"></script>
+</meta></head>
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+<div class="container-fluid wm-page-content">
+<a name="_top"></a>
+<p>tänne kunkin komponentin kuvaus mikä rooli yms.</p>
+<h2 id="actionbarjs">ActionBar.js</h2>
+<p>Selecting the view for NDVI data</p>
+<!--#### Structure-->
+<pre><code>ActionBar
+└── Navbar
+    ├── Button (Navbar.Toggle)
+    └── Navbar.Collapse
+        └── Nav
+            ├── Nav.Link ("Chart")
+            ├── Nav.Link ("Statistics")
+            ├── Nav.Link ("CompareYears")
+            ├── Nav.Link ("AreaOnMap")
+            ├── Nav.Link ("Location")
+            └── Nav.Link ("Weather")
+</code></pre>
+<p>when menu is collapsed then Navbar.Toggle Button is activated</p>
+<h4 id="components-and-libraries">Components and libraries</h4>
+<ul>
+<li>{ Button, Nav, Navbar } from "react-bootstrap"</li>
+<li>{List} from "react-bootstrap-icons"</li>
+</ul>
+<h2 id="bargraphjs">BarGraph.js</h2>
+<p>Showing NDVI-data in bar graph mode.</p>
+<h3 id="structure">Structure</h3>
+<pre><code>BarGraph
+└── Container
+    └── Plot
+</code></pre>
+<h4 id="components-and-libraries_1">Components and libraries</h4>
+<ul>
+<li>Container from "react-bootstrap"</li>
+<li>Plot from "react-plotly.js"</li>
+</ul>
+<h2 id="bgimagejs">BGimage.js</h2>
+<p>Showing just image.</p>
+<pre><code></code></pre>
+<h4 id="components-and-libraries_2">Components and libraries</h4>
+<h2 id="carouseljs">Carousel.js</h2>
+<p>Showinng NDVI-images in carousel</p>
+<h3 id="structure_1">Structure</h3>
+<pre><code>Carousel
+└── Carousel
+    └── Carousel.Item
+        ├── img
+        └── Carousel.Caption
+</code></pre>
+<h4 id="components-and-libraries_3">Components and libraries</h4>
+<ul>
+<li>{ Carousel } from "react-bootstrap"</li>
+</ul>
+<h2 id="confirmmodaljs">Confirmmodal.js</h2>
+<p>Showing short content in modal dialog</p>
+<h3 id="structure_2">Structure</h3>
+<pre><code>ConfirmModal
+└── Modal
+    ├── Modal.Header
+    │   └── Modal.Title
+    ├── Modal.Body
+    └── Modal.Footer
+        ├── Button (Cancel)
+        └── Button (Confirm)
+</code></pre>
+<h4 id="components-and-libraries_4">Components and libraries</h4>
+<ul>
+<li>{ Modal,Button} from "react-bootstrap"</li>
+</ul>
+<h2 id="cumulativeprecipitationgraphjs">CumulativePrecipitationGraph.js</h2>
+<p>Showing cumulative precipitation of year in line chart mode</p>
+<h3 id="structure_3">Structure</h3>
+<pre><code>CumulativePrecipitationGraph
+└── Plot
+</code></pre>
+<h4 id="components-and-libraries_5">Components and libraries</h4>
+<ul>
+<li>Plot from "react-plotly.js"</li>
+</ul>
+<h2 id="cumulativetemperaturegraphjs">CumulativeTemperatureGraph.js</h2>
+<p>Showing cumulative temperature of year in line chart mode </p>
+<h3 id="structure_4">Structure</h3>
+<pre><code>CumulativeTemparatureGraph
+└── Plot
+</code></pre>
+<h4 id="components-and-libraries_6">Components and libraries</h4>
+<ul>
+<li>Plot from "react-plotly.js"</li>
+</ul>
+<h2 id="datachartjs">DataChart.js</h2>
+<p>Showing line charts for multiple datasets </p>
+<h3 id="structure_5">Structure</h3>
+<pre><code>DataChart
+└── Plot
+</code></pre>
+<h4 id="components-and-libraries_7">Components and libraries</h4>
+<ul>
+<li>Plot from "react-plotly.js"</li>
+</ul>
+<h2 id="linegraphjs">LineGraph.js</h2>
+<p>Showing NDVI-data in line graph mode. </p>
+<h3 id="structure_6">Structure</h3>
+<pre><code>LineGraph
+└── Container
+    └── Plot
+</code></pre>
+<h4 id="components-and-libraries_8">Components and libraries</h4>
+<ul>
+<li>Container from "react-bootstrap"</li>
+<li>Plot from "react-plotly.js"</li>
+</ul>
+<h2 id="mysliderjs">MySlider.js</h2>
+<p>Selecting speed of the carousel in play mode by slider </p>
+<h3 id="structure_7">Structure</h3>
+<pre><code>MySlider
+└── Slider
+</code></pre>
+<h4 id="components-and-libraries_9">Components and libraries</h4>
+<ul>
+<li>Slider from "@appigram/react-rangeslider"</li>
+<li>"@appigram/react-rangeslider/lib/index.css"</li>
+<li>"./css/slider.css";
+slider.css contains some customizations</li>
+</ul>
+<h2 id="ndvifilmjs">NDVIFilm.js</h2>
+<p>Showing multiple images at the same time as minimized and enables selectig specifig image with statistics to show in app </p>
+<h3 id="structure_8">Structure</h3>
+<pre><code>NDVIFilm
+└── BasicFilm
+</code></pre>
+<h4 id="components-and-libraries_10">Components and libraries</h4>
+<ul>
+<li>BasicFilm, { createBasicStyleSet} from "react-film"</li>
+</ul>
+<h2 id="ndvivaluestablejs">NDVIValuesTable.js</h2>
+<p>Showing NDVI-statistics fot the specifig date.</p>
+<h3 id="structure_9">Structure</h3>
+<pre><code>NDVIValuesTable
+└── Table
+    └── tbody
+        ├── tr
+        │   ├── td ("Avg:")
+        │   └── td
+        │       └── Badge
+        ├── tr
+        │   ├── td ("Max:")
+        │   └── td
+        │       └── Badge
+        ├── tr
+        │   ├── td ("Min:")
+        │   └── td
+        │       └── Badge
+        └── tr
+            ├── td ("Std:")
+            └── td
+                └── Badge
+</code></pre>
+<h4 id="components-and-libraries_11">Components and libraries</h4>
+<ul>
+<li>{Table, Badge} from "react-bootstrap"</li>
+</ul>
+<h2 id="offcanvasjs">OffCanvas.js</h2>
+<p>Showing the content in a popup window (for this app NDVIfilm component) </p>
+<h3 id="structure_10">Structure</h3>
+<pre><code>OffCanvas
+└── Offcanvas
+    └── Offcanvas.Body
+        ├── Button (ChevronCompactDown)            
+        └── NDVIFilm
+</code></pre>
+<h4 id="components-and-libraries_12">Components and libraries</h4>
+<ul>
+<li>{ Button, Offcanvas } from "react-bootstrap"</li>
+<li>{ ChevronCompactDown } from "react-bootstrap-icons"</li>
+<li>NDVIFilm.js</li>
+</ul>
+<h2 id="onprogressmodaljs">OnProgressModal.js</h2>
+<p>Showing progress indicator when data is loaded from the server</p>
+<h3 id="structure_11">Structure</h3>
+<pre><code>OnProgressModal
+└── Modal
+    └── Button
+        └── Spinner
+</code></pre>
+<ul>
+<li>{ Modal, Spinner, Button } from "react-bootstrap"</li>
+</ul>
+<h2 id="scalejs">Scale.js</h2>
+<p>Showing percential amounts of NDVI-values in stack bar</p>
+<h3 id="structure_12">Structure</h3>
+<pre><code>Scale
+└── Plot
+</code></pre>
+<h4 id="components-and-libraries_13">Components and libraries</h4>
+<ul>
+<li>Plot from "react-plotly.js"</li>
+</ul>
+<h2 id="toastmsgjs">ToastMsg.js</h2>
+<h3 id="structure_13">Structure</h3>
+<pre><code>ToastMsg
+└── Toast
+    ├── Toast.Header
+    │   └── strong (params.header)
+    └── Toast.Body (params.message)
+</code></pre>
+<h4 id="components-and-libraries_14">Components and libraries</h4>
+<ul>
+<li>{ Toast } from "react-bootstrap"</li>
+</ul>
+<br/>
+</div>
+<footer class="container-fluid wm-page-content">
+<p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+<script>
+            window.update_swagger_ui_iframe_height = function (id) {
+                var iFrameID = document.getElementById(id);
+                if (iFrameID) {
+                    full_height = (iFrameID.contentWindow.document.body.scrollHeight + 80) + "px";
+                    iFrameID.height = full_height;
+                    iFrameID.style.height = full_height;
+                }
+            }
+        
+            let iframe_id_list = []
+            var iframes = document.getElementsByClassName("swagger-ui-iframe");
+            for (var i = 0; i < iframes.length; i++) { 
+                iframe_id_list.push(iframes[i].getAttribute("id"))
+            }
+        
+            let ticking = true;
+            
+            document.addEventListener('scroll', function(e) {
+                if (!ticking) {
+                    window.requestAnimationFrame(()=> {
+                        let half_vh = window.innerHeight/2;
+                        for(var i = 0; i < iframe_id_list.length; i++) {
+                            let element = document.getElementById(iframe_id_list[i])
+                            if(element==null){
+                                return
+                            }
+                            let diff = element.getBoundingClientRect().top
+                            if(element.contentWindow.update_top_val){
+                                element.contentWindow.update_top_val(half_vh - diff)
+                            }
+                        }
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+        </script></body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="../img/favicon.ico" rel="shortcut icon"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<title>Xxfrontend - ytsp0300-3004 Frontend for NDVI demo for agriculture</title>
+<link href="../css/bootstrap-3.3.7.min.css" rel="stylesheet"/>
+<link href="../css/font-awesome-4.7.0.css" rel="stylesheet"/>
+<link href="../css/base.css" rel="stylesheet"/>
+<link href="../css/highlight.css" rel="stylesheet"/>
+<link href="../style.css" rel="stylesheet"/>
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+<script src="../js/jquery-3.2.1.min.js"></script>
+<script src="../js/bootstrap-3.3.7.min.js"></script>
+<script src="../js/highlight.pack.js"></script>
+<base target="_top"/>
+<script>
+      var base_url = '..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+          {title: "Actually test database contains all AOI in the system, NDVI database will include all NDVI-imagedata of specifig time/date perioid for all AOI.", url: "#_top", children: [
+          ]},
+          {title: "Choosing UI framework", url: "#choosing-ui-framework", children: [
+          ]},
+          {title: "Components", url: "#components", children: [
+          ]},
+          {title: "k\u00e4sittelit\u00e4 ja tekniikoita", url: "#kasittelita-ja-tekniikoita", children: [
+          ]},
+          {title: "T\u00c4M\u00c4", url: "#tama", children: [
+          ]},
+        ];
+
+    </script>
+<script src="../js/base.js"></script>
+</meta></head>
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+<div class="container-fluid wm-page-content">
+<a name="_top"></a>
+<p>In this demo the database in server is empty, so the data is not driven before actual use which 
+is a common way in real world. But total performance time is actially could be short enough so not disturb the use with delay.</p>
+<h3 id="tekkaa">tekkaa</h3>
+<p>https://www.npmjs.com/package/react-image-gallery</p>
+<p>https://linxtion.com/demo/react-image-gallery/</p>
+<p>selectin NDVi-image data by image-film, dropdown, lef/righr arrows swapping, autoplay   </p>
+<h2 id="actually-test-database-contains-all-aoi-in-the-system-ndvi-database-will-include-all-ndvi-imagedata-of-specifig-timedate-perioid-for-all-aoi">Actually test database contains all AOI in the system, NDVI database will include all NDVI-imagedata of specifig time/date perioid for all AOI.</h2>
+<p>Contorlling and montoring all the AOI on the system. Posisble to make data analysess in generel considering all the AOIs on the system.
+StadardDeviation is for se if the growth is steady tasaista, this is seen also in te NDVI image ofin visual. the closer the value is to zero, the more steady the growth.</p>
+<h2 id="choosing-ui-framework">Choosing UI framework</h2>
+<h3 id="mui">MUI</h3>
+<p>https://mui.com/</p>
+<p>https://refine.dev/blog/material-ui-autocomplete-component/#introduction</p>
+<h3 id="ant">ANT</h3>
+<p>https://ant.design/</p>
+<h3 id="bootstrap">Bootstrap</h3>
+<p>Frontend is demo, testing and data manipulating tool.
+- separate calls to backend if special needs are needed.
+- testings esimerkkejä tähän.  </p>
+<p>Voisi olla monitotinti SOCKET yhteys päivitystestiin eli simuloinit että on useita peltosettejä.</p>
+<p>Navbar tsekkaa Peltomäelle tehty juttu!!! ota materiaalilinkit talteen1!!!</p>
+<p>voisiko käyttää jotenkin danfo.js!!! stsistiikkaa ja data-analyysejä mm. lasketaan keskiarvoja yms. mena, min, max, std
+https://www.npmjs.com/package/danfojs</p>
+<h1 id="components">Components</h1>
+<p>Filmroll/Carousel
+https://www.npmjs.com/package/react-film
+https://spyip.github.io/react-film/
+https://github.com/spyip/react-film?tab=readme-ov-file</p>
+<p>leaflet:
+imagessa on koodinaatit ei tarvitse siis laskea uudelleen bboxia mutta alkuun 
+laske ja vertaa!!!!</p>
+<p>SElvitä customhookit ja miksi niitä käytetään
+HUOM: fullstack open!!!!
+https://fullstackopen.com/osa7/custom_hookit#hookit</p>
+<p>useField
+D:\fullstackopen2022\part7\country-hook-main77</p>
+<p>FULLSTACK
+In this work frontend is located in the same server than backend
+build folder voisi oilla jokin muukin tsekkaa kuinka ja mihin määritellään!!!!</p>
+<p>FRONTENDISTÄ oma hakimisto johion eri osat mm. paget ja components
+GRAAFI valinta vuodella sekä avg max min -valinta mitä piirretään
+sekä mode pylväs tai linechart</p>
+<p>This fronend is made for React framework
+and is for backend which I made for the course xxx 
+so frontend for MERN fullstack
+responsitiivisuus huomioitava myös mobil käyttö 
+näytä sovellus videolla myös kännykässä emulaattorissa</p>
+<p>TEE auto play kuten eikoissa demoissa kontrollit estetty muut kuin paly/pause</p>
+<p>I dedicated to test and develop purpose for backend</p>
+<p>REDUX??
+JOKIN TOINEN KUIN BOOTSTRAP</p>
+<p>liää graafiin valinta min, max, mean, std standard deviation
+mahdollisesti kaikki samaan graafiin mjutta tuleeko pylväsdiagramiissa ongelmia</p>
+<p>this frontend takes contact to backend which has been mede for coursewordk assignment xxx</p>
+<p>tähän API kuvaus backendistä ja siis routet ja endpointit ja mitä parameterajk sisään ja mitä saadaa requestin tuloksena</p>
+<h3 id="react-ui-component-libraries">React UI Component Libraries</h3>
+<p>Ther eis lot of good choices. In this work I used Bootstrap but changed it to Semantic, why just get to know better alternatives.
+Compare if can...</p>
+<p>esim.</p>
+<p>https://npm.io/package/react-bootstrap</p>
+<p>https://www.npmjs.com/package/semantic-ui-react</p>
+<p>https://npm.io/package/semantic-ui-react</p>
+<h1 id="kasittelita-ja-tekniikoita">käsittelitä ja tekniikoita</h1>
+<p>custom hook esimerkki fetchImage!!!!</p>
+<p>image vois hakea kaikki imaget yhdellä haulla pitöisi nyt olla
+niin että dates pitä siällään nuo imageid:eet niin voisiko 
+kuitenkin käyttää geometrian sha256-mutoa ja hakea kannasta kaikki kerralla contains
+filmirulla tarvii kaikki kuvat valitulta vuodelta!!!
+mutta normaalisti haetaan vain yjsi kuva kerrallaan sii mitä</p>
+<h3 id="carousel-for-ndvi-images">carousel for NDVI-images</h3>
+<p>can be swapped especially handy for touch screeen e.g. mobile ussers phones and tablets</p>
+<p>"@turf/bbox": "^6.5.0",
+    "axios": "^1.4.0",
+    "bootstrap": "^5.2.3",
+    "plotly.js": "^2.24.3",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.7.4",
+    "react-bootstrap-icons": "^1.10.3",
+    "react-dom": "^18.2.0",
+    "react-film": "^3.1.0",
+    "react-leaflet": "^4.2.1",
+    "react-plotly.js": "^2.6.0",
+    "react-router-dom": "^6.11.0",
+    "react-scripts": "5.0.1",</p>
+<p>Muista bootstrap css sekä icons sekä react-bootstrap ja bootstrap</p>
+<h3 id="slider">SLIDER</h3>
+<p>https://www.npmjs.com/package/react-bootstrap-range-slider
+ <code>npm i react-bootstrap-range-slider</code></p>
+<p>https://jaywilz.github.io/react-bootstrap-range-slider/</p>
+<p>### käytä tätä</p>
+<p>https://www.npmjs.com/package/rc-slider
+<code>npm i rc-slider</code></p>
+<p>https://slider-react-component.vercel.app/</p>
+<h1 id="tama">TÄMÄ</h1>
+<p>https://whoisandy.github.io/react-rangeslider/</p>
+<p>https://www.npmjs.com/package/@appigram/react-rangeslider
+<code>npm i @appigram/react-rangeslider</code></p>
+<p>https://www.npmjs.com/package/react-plotly.js
+<code>npm install react-plotly.js plotly.js</code></p>
+<p><code>npm install axios axios-hooks</code></p>
+<p>Login 
+Token täytyy olla ehtona käyttöliittymän valintoihin 
+eli jos ei ole valid token niin vain login button näkyy</p>
+<p>talletetaan token storageen, määritetään expiration time
+mutta kuinka tuo storage hoidetaan eli ei tarvii kirjautua joka kerta kun browseriin syötetän url
+mutta kun token menee vanhaksi niin kuinka tsekataan ja kuinka uusitaan olisiko näin että kun ei käytetän niin menee vanhaksi tietyn ajan jälkeen muuten on eloissa ja uusitaan aina kun tehdään kutsu tai tietyin aikavälein????</p>
+<p>LoginDialog
+loginForm TEE erikseen joten
+registryForm</p>
+<p>navigationBar -&gt; imnaksi komponentikseen!!!!</p>
+<p>services-&gt; kaikki ulkomaailman jutut nyt siellä vastause-service  </p>
+<p>selvitä baseUrl App.js:n alussa
+local to local server
+local to azure server
+azure to </p>
+<p>voiko tokenista jos vaan sen palauttaa kaivaa esiin käyttäjä tiedot?</p>
+<p>App.js</p>
+<p>const getConfig = () =&gt; {
+    let _token = <code>bearer ${token}</code>;
+    const config = {
+      headers: { Authorization: _token },
+    };</p>
+<pre><code>return config;
+</code></pre>
+<p>};</p>
+<p>getConfig() välitetään kaikille sivuille
+Tests sivulla on esimerkki:
+  {page === "Tests" &amp;&amp; <tests baseurl="{baseUrl}" config="{getConfig()}" geometry="{geometry}"></tests>}</p>
+<p>fetching current weather should be defined at frontend if
+  refreshing is enabled</p>
+<br/>
+</div>
+<footer class="container-fluid wm-page-content">
+<p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+<script>
+            window.update_swagger_ui_iframe_height = function (id) {
+                var iFrameID = document.getElementById(id);
+                if (iFrameID) {
+                    full_height = (iFrameID.contentWindow.document.body.scrollHeight + 80) + "px";
+                    iFrameID.height = full_height;
+                    iFrameID.style.height = full_height;
+                }
+            }
+        
+            let iframe_id_list = []
+            var iframes = document.getElementsByClassName("swagger-ui-iframe");
+            for (var i = 0; i < iframes.length; i++) { 
+                iframe_id_list.push(iframes[i].getAttribute("id"))
+            }
+        
+            let ticking = true;
+            
+            document.addEventListener('scroll', function(e) {
+                if (!ticking) {
+                    window.requestAnimationFrame(()=> {
+                        let half_vh = window.innerHeight/2;
+                        for(var i = 0; i < iframe_id_list.length; i++) {
+                            let element = document.getElementById(iframe_id_list[i])
+                            if(element==null){
+                                return
+                            }
+                            let diff = element.getBoundingClientRect().top
+                            if(element.contentWindow.update_top_val){
+                                element.contentWindow.update_top_val(half_vh - diff)
+                            }
+                        }
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+        </script></body>
+</html>

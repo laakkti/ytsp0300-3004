@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="../../img/favicon.ico" rel="shortcut icon"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"/>
+<title>Planning - ytsp0300-3004 Frontend for NDVI demo for agriculture</title>
+<link href="../../css/bootstrap-3.3.7.min.css" rel="stylesheet"/>
+<link href="../../css/font-awesome-4.7.0.css" rel="stylesheet"/>
+<link href="../../css/base.css" rel="stylesheet"/>
+<link href="../../css/highlight.css" rel="stylesheet"/>
+<link href="../../style.css" rel="stylesheet"/>
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+<script src="../../js/jquery-3.2.1.min.js"></script>
+<script src="../../js/bootstrap-3.3.7.min.js"></script>
+<script src="../../js/highlight.pack.js"></script>
+<base target="_top"/>
+<script>
+      var base_url = '../..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+          {title: "Scalebar", url: "#_top", children: [
+          ]},
+        ];
+
+    </script>
+<script src="../../js/base.js"></script>
+</head>
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+<div class="container-fluid wm-page-content">
+<a name="_top"></a>
+<p>Planning documentation</p>
+<p>tänne kuva kun grid-line is on</p>
+<p>UI design
+class grid.css taking in action import ./grid.css className="grid-line"</p>
+<p><img alt="ui_planning" src="../../images/develop.png" width="600"/></p>
+<p>TÄNNE kuvakaappauksia eri kohteista sekä liitä mkdocsiin planning document</p>
+<p>The whole system will be MERN stack
+so choossen fromtend framework will be React 
+UI component library Reactr Bootstap with extra 3rd party components if needed  </p>
+<pre><code>App
+└── Navbar
+    ├── Search AOI
+    ├── Authentication (Login/Register)
+    └── Demo Tools Tests
+        ├── NDVI-image &amp; data
+        ├── NDVIcontrols
+        ├── ActionBar
+        │   ├── Chart
+        │   ├── Statistics
+        │   ├── CompareYears
+        │   ├── OnMap
+        │   ├── Location 
+        │   └── Weather
+        └── BottomBar
+
+</code></pre>
+<p>MAINITSE hookit yms. end-poinit johin otetaan ja miten yhteys piirrä MERMAID periaatteessa vain /image /list /activate /weather</p>
+<h3 id="authentication-user-service">Authentication (user-service)</h3>
+<p>token based
+Login popup windows is called in boastrap as Modal</p>
+<p>need are </p>
+<p>tähän mermaid  (samat backendiin)
+login 
+reg</p>
+<p>navbar should contain search
+search input: assosiative predictive input, list of searh results choose item to show NDVI Image and data of AOI
+kerro tähän elementin nimi lista...</p>
+<h4 id="ndvi-image-data">NDVI image + data</h4>
+<p>NDVi image should be showed and the images of the date change should be implemented.
+A good choice/alternative could be React Bootstrap Carousel</p>
+<h1 id="scalebar">Scalebar</h1>
+<p>percentage of levels by the color (plotly)</p>
+<h3 id="other-controls">Other controls</h3>
+<p>selectable yearlist 
+selectable datelist 
+progresbar for loading
+Actionbar
+Chart view
+Statistics/data view</p>
+<h3 id="map-views">map views</h3>
+<p>show on map
+location, 
+React   leaflet</p>
+<h3 id="weather-view">Weather view</h3>
+<p>customHook for fetching data from weather end-point
+baseUrl joko dev localhost:5000 tai azure-address</p>
+<h4 id="extra-features">extra features</h4>
+<p>Fullscreen set and exit
+bottombar iamges like filmroll
+- should be tabbed clikced for corresponding to select Image of the date neede, the UI 
+- extra challenges to scroll too activeindex of images, selected outside of the filmroll</p>
+<p>Autoplay by carousel
+slider for set speed of ...</p>
+<p>About technology
+Bootstrapped React</p>
+<p>data
+from all the valid NDVI data from year 2021 for every geometry</p>
+<p>restrictions
+mongodb free plan 512MB dta limit restriction for free plan</p>
+<p>tyyli
+tarinankerrolisesti esim. bittongroup pitäois asetaa oikeaan yläkulmaan rivillä</p>
+<p>position=sticky when like a flying element like Button
+Mobile
+tsekkaa viewportin koko!!!! ja sen suhteen... Mm. carousel pitää pienentää jotta mahdtuu alimåaan row:n kamaa</p>
+<p>Have to get knowledge if the element is visible or not</p>
+<p>window.getComputedStyle(buttonRef.current).display)
+Basic data fetching services has been implemented in App.js and data is distributed Pages via props.</p>
+<p>UI
+Based on react Bootstrap grid system</p>
+<p>27.04.2024 Tsekkaa mobile tilassa floating button tms. käyttöä tilan säästämiseksi!!!!</p>
+<p>Kokeile</p>
+<p>Width 100vw
+Height 100vh
+Bootstao doesn't have all the trics so need some dom stuff.</p>
+<p>State management /handling
+This demo app does not use Redux or context to use like global variable mey should use but... example. Delivering expanded variable from app to linegraph is pretty (tsekkaa fullstackopen) Example app-&gt;demo-&gt;chart-linegraph</p>
+<p>Redux is not used but ifore compilcated context or Redux would be googd choice.</p>
+<p>22.03.2024</p>
+<p>worakareas to mongoDb from json format
+(source) Data (in json) form database route in backend</p>
+<p>including geometrias of different areas (fields, plants) agriculture AOI (Area Of Interest)</p>
+<p>varsinainen koodi backendillä</p>
+<p>endpoint: .../ndvi/api/v1/workAreasToMongo</p>
+<p>URL: localhost:5000/ndvi/api/v1/workAreasToMongo</p>
+<p>const getConfig = () =&gt; { let _token = bearer ${token};</p>
+<p>return { headers: { Authorization: _token } };
+};</p>
+<p>const res = await axios.get(baseUrl + "/ndvi/api/v1/workAreasToMongo",config);</p>
+<p>authentication is needed and token have to be delivered every requests (to ensure revilegues) admin have to true!!!</p>
+<p>Server
+Client
+Server
+Client
+alt
+[Process Successful]
+[Process Failed]
+GET /ndvi/api/v1/workAreasToMongo
+1
+Status 200 (successful)
+2
+Status 401 (failed)
+3
+Backend
+Frontend
+Backend
+Frontend
+alt
+[Process Successful]
+[Process Failed]
+GET /ndvi/api/v1/workAreasToMongo
+1
+Status 200 (successful)
+2
+Status 401 (failed)
+3
+reading data from database
+tämä sama varsinaiseen dokuun valmistavat toimenpiteet getting list of geometries mikä url?</p>
+<p>22.03.2024</p>
+<p>updateDb jos json-listaus päivityy niin ajetaan muutokset/lisäykset databaseen</p>
+<p>Pitää olla kirjautunut updateallndvis eli haetana tietyn aikarangen mukainen data sentinelhibista (tämä tätä demoa varten haetaan) normaalisti mvalitaan menusta ja suoritetaan haku ja jatkossa päivitys</p>
+<p>UI refactoring responsive
+HUOm speed slider setting pitää huomioida suunta mihin avautuu ja ehkö koko asetuskin</p>
+<p>Some content has been disabled in this document</p>
+<p>fix responsiviness</p>
+<br/>
+</div>
+<footer class="container-fluid wm-page-content">
+<p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+<script>
+            window.update_swagger_ui_iframe_height = function (id) {
+                var iFrameID = document.getElementById(id);
+                if (iFrameID) {
+                    full_height = (iFrameID.contentWindow.document.body.scrollHeight + 80) + "px";
+                    iFrameID.height = full_height;
+                    iFrameID.style.height = full_height;
+                }
+            }
+        
+            let iframe_id_list = []
+            var iframes = document.getElementsByClassName("swagger-ui-iframe");
+            for (var i = 0; i < iframes.length; i++) { 
+                iframe_id_list.push(iframes[i].getAttribute("id"))
+            }
+        
+            let ticking = true;
+            
+            document.addEventListener('scroll', function(e) {
+                if (!ticking) {
+                    window.requestAnimationFrame(()=> {
+                        let half_vh = window.innerHeight/2;
+                        for(var i = 0; i < iframe_id_list.length; i++) {
+                            let element = document.getElementById(iframe_id_list[i])
+                            if(element==null){
+                                return
+                            }
+                            let diff = element.getBoundingClientRect().top
+                            if(element.contentWindow.update_top_val){
+                                element.contentWindow.update_top_val(half_vh - diff)
+                            }
+                        }
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+        </script></body>
+</html>

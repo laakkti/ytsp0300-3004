@@ -1,0 +1,58 @@
+.code-block {
+    width: 100%;
+    margin: 0 auto;
+}
+
+h1 {
+    color: darkcyan;
+    font-size:x-large;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 22px;
+}
+
+h3 {
+    /*background-color: lightblue;*/
+    /*background-color: yellow;*/
+    font-size: 18px;
+    
+}
+
+
+h4 {
+
+    font-size: 16px; 
+   
+ }
+ 
+ h5 {
+
+    font-size: 22px; 
+ }
+
+
+/* custom.css */
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;  /* Set your desired background color */
+}
+
+
+/*
+body {
+    background-color: #FFFF00; /* Any color code or color name */
+}
+*/

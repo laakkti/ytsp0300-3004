@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="../../img/favicon.ico" rel="shortcut icon"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<title>Diary - ytsp0300-3004 Frontend for NDVI demo for agriculture</title>
+<link href="../../css/bootstrap-3.3.7.min.css" rel="stylesheet"/>
+<link href="../../css/font-awesome-4.7.0.css" rel="stylesheet"/>
+<link href="../../css/base.css" rel="stylesheet"/>
+<link href="../../css/highlight.css" rel="stylesheet"/>
+<link href="../../style.css" rel="stylesheet"/>
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+<script src="../../js/jquery-3.2.1.min.js"></script>
+<script src="../../js/bootstrap-3.3.7.min.js"></script>
+<script src="../../js/highlight.pack.js"></script>
+<base target="_top"/>
+<script>
+      var base_url = '../..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+        ];
+
+    </script>
+<script src="../../js/base.js"></script>
+</meta></head>
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
+<div class="container-fluid wm-page-content">
+<a name="_top"></a>
+<p>28.03.2024 
+App.js gettiag AOIList from server</p>
+<p>29.03.2024
+Checking mobile use e.g. pwa tsekkaa mobile programming kurssi</p>
+<p>01.04.2024
+tämä backend diaryyn registering and loggiin token based...</p>
+<p>2.04.2024
+refactoring page demo fetching all the geometry based NDVI images from the server/database/senetinelhub</p>
+<p>lot of time for setting UI and resoinsicve not working/performing perfectly</p>
+<p>need session to desighn and learn more UI and UX to produce responsive application</p>
+<p>we can chage aoi any time we want so the selected view will be pdated new data. </p>
+<p>todo;
+compareyears mallia koosta chartiin ja div määritetään parentissa 90% 90%</p>
+<p>Compare years
+The years not the save weather conditionals for agriculture in Finaland is pretty changing.
+Conditions are ... thre is not data for the same dates every year.
+The average values of each year are put to the same axis </p>
+<p>TODO:
+yhdistä getImageRequest ja getAxiosRequest siis annetaan koko url imagessa on nyt lisänä image, muuten sama kuin...</p>
+<p>11.04.2024
+set React Bootstrap layout create, simple example to practise dynamic  resposivgibility</p>
+<p>14.04.2024
+Testing when/while backend is running in Azure web service, works fine but hhe Azure plan is pretty slow comparing to testing/use in local.</p>
+<p>15.04.2024</p>
+<p>To biggest challenge was positioning the elements and responsive
+Many studies had, there has been said tHAT UI/UX TAKes much of times so not focusing it to spned suunnitelty aika, theres bunch of UI  gaphical libs.</p>
+<p>24.04.2024
+refactor UI for more responsive</p>
+<br/>
+</div>
+<footer class="container-fluid wm-page-content">
+<p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
+<script>
+            window.update_swagger_ui_iframe_height = function (id) {
+                var iFrameID = document.getElementById(id);
+                if (iFrameID) {
+                    full_height = (iFrameID.contentWindow.document.body.scrollHeight + 80) + "px";
+                    iFrameID.height = full_height;
+                    iFrameID.style.height = full_height;
+                }
+            }
+        
+            let iframe_id_list = []
+            var iframes = document.getElementsByClassName("swagger-ui-iframe");
+            for (var i = 0; i < iframes.length; i++) { 
+                iframe_id_list.push(iframes[i].getAttribute("id"))
+            }
+        
+            let ticking = true;
+            
+            document.addEventListener('scroll', function(e) {
+                if (!ticking) {
+                    window.requestAnimationFrame(()=> {
+                        let half_vh = window.innerHeight/2;
+                        for(var i = 0; i < iframe_id_list.length; i++) {
+                            let element = document.getElementById(iframe_id_list[i])
+                            if(element==null){
+                                return
+                            }
+                            let diff = element.getBoundingClientRect().top
+                            if(element.contentWindow.update_top_val){
+                                element.contentWindow.update_top_val(half_vh - diff)
+                            }
+                        }
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+        </script></body>
+</html>
