@@ -7,7 +7,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="../../img/favicon.ico" rel="shortcut icon"/>
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-<title>deployment - ytsp0300-3004 Frontend for NDVI demo for agriculture</title>
+<title>Deployment - ytsp0300-3004 Frontend for NDVI demo for agriculture</title>
 <link href="../../css/bootstrap-3.3.7.min.css" rel="stylesheet"/>
 <link href="../../css/font-awesome-4.7.0.css" rel="stylesheet"/>
 <link href="../../css/base.css" rel="stylesheet"/>
@@ -27,6 +27,12 @@
       var is_top_frame = false;
         
         var pageToc = [
+          {title: "Deployment", url: "#_top", children: [
+          ]},
+          {title: "Launching the application", url: "#launching-the-application", children: [
+          ]},
+          {title: "Installing application", url: "#installing-application", children: [
+          ]},
         ];
 
     </script>
@@ -39,19 +45,22 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <div class="container-fluid wm-page-content">
 <a name="_top"></a>
 <h3 id="deployment">Deployment</h3>
-<p>This frontend application is a part of MERN-stack, so for the deployment the app should be build.</p>
+<p>This frontend application is a part of MERN-stack, 
+it is located in the same server than backend.<br/>
+For the deployment the app should be build.</p>
 <p><code>npm run build</code></p>
 <p>and the build folder should be copied to backend's root.</p>
-<p>In this work frontend is located in the same server than backend
-build folder voisi oilla jokin muukin tsekkaa kuinka ja mihin määritellään!!!!</p>
-<p>Here is the link to the deployment for whole MERN-stack.</p>
-<h3 id="staring-the-application">Staring the application</h3>
-<p>App runs on a Azure
-https://ndvidemo.azurewebsites.net</p>
-<p>but it is possible to install as a application, which actually/in fact is running in address https://ndvidemo.azurewebsites.net.</p>
-<h3 id="install-application">Install application</h3>
-<p><img alt="bar chart" src="../../images/install_app.png" width="600"/></p>
-<p><img alt="bar chart" src="../../images/installed_app.png" width="600"/></p>
+<h4 id="appjs-on-backend-code">app.js on backend code</h4>
+<p>This way frontend code is taken as a part of MERN-stack.</p>
+<pre><code>app.use('/', express.static('build'));
+</code></pre>
+<p>The deployment process is perfomed as a part of deployment of backend.</p>
+<h3 id="launching-the-application">Launching the application</h3>
+<p>App (the MERN-fullstack) runs on a Azure web service</p>
+<p><a href="https://ndvidemo.azurewebsites.net" target="_blank">https://ndvidemo.azurewebsites.net</a></p>
+<h3 id="installing-application">Installing application</h3>
+<p><img alt="bar chart" src="../../images/install_app.png" style="display: block; margin: 0;" width="800"/></p>
+<p><img alt="bar chart" src="../../images/installed_app.png" style="display: block; margin: 0;" width="800"/></p>
 <br/>
 </div>
 <footer class="container-fluid wm-page-content">

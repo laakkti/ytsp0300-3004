@@ -27,8 +27,6 @@
       var is_top_frame = false;
         
         var pageToc = [
-          {title: "Getting NDVI dates and statistics of selected AOI", url: "#_top", children: [
-          ]},
         ];
 
     </script>
@@ -40,8 +38,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </script>
 <div class="container-fluid wm-page-content">
 <a name="_top"></a>
-<h2 id="getting-ndvi-dates-and-statistics-of-selected-aoi">Getting NDVI dates and statistics of selected AOI</h2>
-<p>parameters geometry of AOI, startDate and endDate as body of message </p>
+<h4 id="getting-ndvi-dates-and-statistics-of-selected-aoi">Getting NDVI dates and statistics of selected AOI</h4>
 <div class="mermaid">sequenceDiagram
   autonumber
   participant Frontend
@@ -56,12 +53,11 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 end
 </div>
 <ol>
-<li>request for list of NDVI datas &amp; statistics, needs token in header, token has been given in result of succesfull authentication</li>
+<li>request for list of NDVI datas &amp; statistics, needs token in header, token has been given in result of succesfull authentication
+parameters geometry of AOI, startDate and endDate as body of message </li>
 <li>returns arrays of data with statuscode 200</li>
 <li>returns error status code 404  </li>
 </ol>
-<h3 id="updates-for-new-future-upcoming-ndvi-images-and-statistics-will-be-done-in-backend-server-this-is-documented-longer-in-backend-documentation-of-this-mern-stack">Updates for new future upcoming NDVI images and statistics will be done in backend server, this is documented longer in backend documentation of this MERN-stack</h3>
-<p>siihen tulee sentinelhub ja mongodb yhteys</p>
 <br/>
 </div>
 <footer class="container-fluid wm-page-content">

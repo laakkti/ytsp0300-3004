@@ -29,9 +29,9 @@
       var is_top_frame = (window === window.parent);
         
         var pageToc = [
-          {title: "Idea of the application BACKGROUND of application", url: "#_top", children: [
-              {title: "NDVI API (backend server)", url: "#ndvi-api-backend-server" },
-              {title: "In general/introducion", url: "#in-generalintroducion" },
+          {title: "NDVI demo for Agriculture", url: "#_top", children: [
+              {title: "NDVI (Normalized Difference Vegetation Index)", url: "#ndvi-normalized-difference-vegetation-index" },
+              {title: "Some views of the application in use", url: "#some-views-of-the-application-in-use" },
           ]},
         ];
 
@@ -76,9 +76,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <div class="wm-page-top-frame" id="main-content">
 <nav class="wm-toc-pane">
 <ul class="wm-toctree">
-<li class="wm-toc-li wm-toc-lev1"><a class="wm-article-link wm-toc-text" href="">NDVI for Agriculture</a>
-</li>
-<li class="wm-toc-li wm-toc-lev1"><a class="wm-article-link wm-toc-text" href="intro/">Introduction</a>
+<li class="wm-toc-li wm-toc-lev1"><a class="wm-article-link wm-toc-text" href="">Introcuction</a>
 </li>
 <li class="wm-toc-li wm-toc-lev1 wm-toc-opener"><span class="wm-toc-text">Using the app</span>
 </li>
@@ -86,21 +84,19 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ul class="wm-toctree">
 <li class="wm-toc-li wm-toc-lev2"><a class="wm-article-link wm-toc-text" href="usage/overview/">Overview</a>
 </li>
-<li class="wm-toc-li wm-toc-lev2"><a class="wm-article-link wm-toc-text" href="usage/about/">About</a>
-</li>
 <li class="wm-toc-li wm-toc-lev2 wm-toc-opener"><span class="wm-toc-text">Authentication</span>
 </li>
 <li class="wm-toc-li-nested collapse">
 <ul class="wm-toctree">
-<li class="wm-toc-li wm-toc-lev3"><a class="wm-article-link wm-toc-text" href="usage/login/">Login</a>
-</li>
 <li class="wm-toc-li wm-toc-lev3"><a class="wm-article-link wm-toc-text" href="usage/registration/">Registration</a>
+</li>
+<li class="wm-toc-li wm-toc-lev3"><a class="wm-article-link wm-toc-text" href="usage/login/">Login</a>
 </li>
 </ul>
 </li>
-<li class="wm-toc-li wm-toc-lev2"><a class="wm-article-link wm-toc-text" href="usage/selecting_area/">Selecting the area</a>
+<li class="wm-toc-li wm-toc-lev2"><a class="wm-article-link wm-toc-text" href="usage/selecting_area/">Selecting the area of interest</a>
 </li>
-<li class="wm-toc-li wm-toc-lev2"><a class="wm-article-link wm-toc-text" href="usage/image/">NDVI image</a>
+<li class="wm-toc-li wm-toc-lev2"><a class="wm-article-link wm-toc-text" href="usage/selecting_date/">Selecting date of NDVI data</a>
 </li>
 <li class="wm-toc-li wm-toc-lev2 wm-toc-opener"><span class="wm-toc-text">Views</span>
 </li>
@@ -122,9 +118,11 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </li>
 </ul>
 </li>
-<li class="wm-toc-li wm-toc-lev2"><a class="wm-article-link wm-toc-text" href="usage/mobile/">Mobile</a>
+<li class="wm-toc-li wm-toc-lev2"><a class="wm-article-link wm-toc-text" href="usage/mobile/">Mobile/portal devices</a>
 </li>
-<li class="wm-toc-li wm-toc-lev2"><a class="wm-article-link wm-toc-text" href="usage/auto_play/">Auto play</a>
+<li class="wm-toc-li wm-toc-lev2"><a class="wm-article-link wm-toc-text" href="usage/auto_play/">Play mode</a>
+</li>
+<li class="wm-toc-li wm-toc-lev2"><a class="wm-article-link wm-toc-text" href="usage/about/">About</a>
 </li>
 </ul>
 </li>
@@ -134,7 +132,29 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <ul class="wm-toctree">
 <li class="wm-toc-li wm-toc-lev2"><a class="wm-article-link wm-toc-text" href="tech/overview/">Overview</a>
 </li>
-<li class="wm-toc-li wm-toc-lev2"><a class="wm-article-link wm-toc-text" href="tech/structure/">Structure</a>
+<li class="wm-toc-li wm-toc-lev2 wm-toc-opener"><span class="wm-toc-text">Structure</span>
+</li>
+<li class="wm-toc-li-nested collapse">
+<ul class="wm-toctree">
+<li class="wm-toc-li wm-toc-lev3"><a class="wm-article-link wm-toc-text" href="tech/structure/">Application</a>
+</li>
+<li class="wm-toc-li wm-toc-lev3"><a class="wm-article-link wm-toc-text" href="tech/demo/">Demo</a>
+</li>
+<li class="wm-toc-li wm-toc-lev3"><a class="wm-article-link wm-toc-text" href="tech/chart/">Chart</a>
+</li>
+<li class="wm-toc-li wm-toc-lev3"><a class="wm-article-link wm-toc-text" href="tech/statistics/">Statistics</a>
+</li>
+<li class="wm-toc-li wm-toc-lev3"><a class="wm-article-link wm-toc-text" href="tech/compare_years/">Compare Years</a>
+</li>
+<li class="wm-toc-li wm-toc-lev3"><a class="wm-article-link wm-toc-text" href="tech/onmap/">On map</a>
+</li>
+<li class="wm-toc-li wm-toc-lev3"><a class="wm-article-link wm-toc-text" href="tech/location/">Location</a>
+</li>
+<li class="wm-toc-li wm-toc-lev3"><a class="wm-article-link wm-toc-text" href="tech/weather/">Weather</a>
+</li>
+<li class="wm-toc-li wm-toc-lev3"><a class="wm-article-link wm-toc-text" href="tech/offcanvas/">OffCanvas (Film)</a>
+</li>
+</ul>
 </li>
 <li class="wm-toc-li wm-toc-lev2 wm-toc-opener"><span class="wm-toc-text">Requests to server</span>
 </li>
@@ -150,7 +170,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </li>
 </ul>
 </li>
-<li class="wm-toc-li wm-toc-lev3"><a class="wm-article-link wm-toc-text" href="tech/aois/">Areas of interests</a>
+<li class="wm-toc-li wm-toc-lev3"><a class="wm-article-link wm-toc-text" href="tech/aois/">Areas of interest</a>
 </li>
 <li class="wm-toc-li wm-toc-lev3"><a class="wm-article-link wm-toc-text" href="tech/dates_stats/">NDVI dates and statistics of AOI</a>
 </li>
@@ -160,30 +180,6 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </li>
 </ul>
 </li>
-<li class="wm-toc-li wm-toc-lev2"><a class="wm-article-link wm-toc-text" href="tech/demo/">Demo</a>
-</li>
-<li class="wm-toc-li wm-toc-lev2 wm-toc-opener"><span class="wm-toc-text">Views meniskös Structuren alle???</span>
-</li>
-<li class="wm-toc-li-nested collapse">
-<ul class="wm-toctree">
-<li class="wm-toc-li wm-toc-lev3"><a class="wm-article-link wm-toc-text" href="tech/chart/">Chart</a>
-</li>
-<li class="wm-toc-li wm-toc-lev3"><a class="wm-article-link wm-toc-text" href="tech/statistics/">Statistics</a>
-</li>
-<li class="wm-toc-li wm-toc-lev3"><a class="wm-article-link wm-toc-text" href="tech/compare_years/">Compare Years</a>
-</li>
-<li class="wm-toc-li wm-toc-lev3"><a class="wm-article-link wm-toc-text" href="tech/onmap/">On map</a>
-</li>
-<li class="wm-toc-li wm-toc-lev3"><a class="wm-article-link wm-toc-text" href="tech/location/">Location</a>
-</li>
-<li class="wm-toc-li wm-toc-lev3"><a class="wm-article-link wm-toc-text" href="tech/weather/">Weather</a>
-</li>
-<li class="wm-toc-li wm-toc-lev3"><a class="wm-article-link wm-toc-text" href="tech/film/">Film on compnentti (pois tai) joten muutkin komponentit structure</a>
-</li>
-</ul>
-</li>
-<li class="wm-toc-li wm-toc-lev2"><a class="wm-article-link wm-toc-text" href="tech/ui/">UI elements &amp; controls</a>
-</li>
 <li class="wm-toc-li wm-toc-lev2"><a class="wm-article-link wm-toc-text" href="tech/libraries/">Libraries</a>
 </li>
 <li class="wm-toc-li wm-toc-lev2"><a class="wm-article-link wm-toc-text" href="tech/components/">Components</a>
@@ -192,35 +188,9 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </li>
 </ul>
 </li>
-<li class="wm-toc-li wm-toc-lev1 wm-toc-opener"><span class="wm-toc-text">Deployment</span>
+<li class="wm-toc-li wm-toc-lev1"><a class="wm-article-link wm-toc-text" href="deploy/deployment/">Deployment</a>
 </li>
-<li class="wm-toc-li-nested collapse">
-<ul class="wm-toctree">
-<li class="wm-toc-li wm-toc-lev2"><a class="wm-article-link wm-toc-text" href="deploy/deployment/">deployment</a>
-</li>
-<li class="wm-toc-li wm-toc-lev2"><a class="wm-article-link wm-toc-text" href="deploy/container.md">Container</a>
-</li>
-<li class="wm-toc-li wm-toc-lev2"><a class="wm-article-link wm-toc-text" href="deploy/azure.md">Azure</a>
-</li>
-<li class="wm-toc-li wm-toc-lev2"><a class="wm-article-link wm-toc-text" href="deploy/pipeline.md">Pipeline</a>
-</li>
-</ul>
-</li>
-<li class="wm-toc-li wm-toc-lev1"><a class="wm-article-link wm-toc-text" href="results/results/">Results and their analysis</a>
-</li>
-<li class="wm-toc-li wm-toc-lev1 wm-toc-opener"><span class="wm-toc-text">Miscellaneous</span>
-</li>
-<li class="wm-toc-li-nested collapse">
-<ul class="wm-toctree">
-<li class="wm-toc-li wm-toc-lev2"><a class="wm-article-link wm-toc-text" href="diary/diary/">Diary</a>
-</li>
-<li class="wm-toc-li wm-toc-lev2"><a class="wm-article-link wm-toc-text" href="planning/planning/">Planning</a>
-</li>
-<li class="wm-toc-li wm-toc-lev2"><a class="wm-article-link wm-toc-text" href="about.md">About</a>
-</li>
-<li class="wm-toc-li wm-toc-lev2"><a class="wm-article-link wm-toc-text" href="planning/grading/">Grading</a>
-</li>
-</ul>
+<li class="wm-toc-li wm-toc-lev1"><a class="wm-article-link wm-toc-text" href="results/results/">In the furure</a>
 </li>
 </ul>
 </nav>
@@ -230,27 +200,17 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </div>
 <div class="container-fluid wm-page-content">
 <a name="_top"></a>
-<h1 id="idea-of-the-application-background-of-application">Idea of the application BACKGROUND of application</h1>
-<p>NDVi
-satellite NDVI-images and statistics</p>
-<h2 id="ndvi-api-backend-server">NDVI API (backend server)</h2>
-<p>New Data is checked and updated every day when using the application.
-There pre fileld data for 2000 areas of the interests.</p>
-<h2 id="in-generalintroducion">In general/introducion</h2>
-<p>This is frontend for the backend, which is done/impelemented for<br>
-<em>Data Modelling and Back-end Development, YTSP0200-3004</em></br></p>
-<p>The app show the NDVI images fo the specifig area of interest, plants fields in range of dates of few years for the growing season to the harvest.</p>
-<p>Why
-at this way faemres and the other involving  agriculture can follow the groving phases of the specifig geometry areas e.g plants
-standard deviarion telss how stedy is or not the growt of the specifig area.</p>
-<p><a href="login.md">Link to Page 2</a>  tämä on vain kokeilu linkistä ei muuta</p>
-<h3 id="ndvi">NDVI</h3>
-<p>what is NDVI, it comes from 
-Normalized Difference Vegetation Index</p>
-<p>For this app the there is also backend which provides NDVI data from different areas from sentinelhub services which prosessing images 
-and coreesposndong data statistics from the satellite images.</p>
-<p>https://www.sentinel-hub.com/</p>
-<p>This font end is just for request data from the server api and serve UI to show and request from backednd api routes.</p>
+<h1 id="ndvi-demo-for-agriculture">NDVI demo for Agriculture</h1>
+<p>Client application which requests NDVI information from RESTful API server. This is a frontend for the backend, which is implemented for the project <em>Data Modelling and Back-end Development, YTSP0200-3004</em>
+This application shows the NDVI images for the specifig area of interest (e.g. plant, field, forest) in range of dates of few years from the growing season to the harvest.</p>
+<h3 id="ndvi-normalized-difference-vegetation-index">NDVI (Normalized Difference Vegetation Index)</h3>
+<p>The well known and widely used NDVI is a simple, but effective index for quantifying green vegetation. It normalizes green leaf scattering in Near Infra-red wavelengths with chlorophyll absorption in red wavelengths.
+The value range of the NDVI is -1 to 1. Negative values of NDVI (values approaching -1) correspond to water. Values close to zero (-0.1 to 0.1) generally correspond to barren areas of rock, sand, or snow. Low, positive values represent shrub and grassland (approximately 0.2 to 0.4), while high values indicate temperate and tropical rainforests (values approaching 1). It is a good proxy for live green vegetation.</p>
+<p><img alt="image 1" src="../../images/ndvi.jpg" width="600"/></p>
+<h3 id="some-views-of-the-application-in-use">Some views of the application in use</h3>
+<p><img alt="displays" src="../images/four_display.png" style="display: block; margin: 0;" width="800"/>
+<img alt="displays" src="../images/four_display4.png" style="display: block; margin: 0;" width="800"/></p>
+<p>In this document is used abbreviation AOI which stands for Area Of Interest, which in this case means field, plant, forest...</p>
 <br/>
 </div>
 <footer class="container-fluid wm-page-content">
@@ -297,5 +257,5 @@ and coreesposndong data statistics from the satellite images.</p>
 </html>
 <!--
 MkDocs version : 1.5.3
-Build Date UTC : 2024-06-01 02:40:07.782415+00:00
+Build Date UTC : 2024-06-02 21:51:42.835956+00:00
 -->

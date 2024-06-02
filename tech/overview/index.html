@@ -27,8 +27,11 @@
       var is_top_frame = false;
         
         var pageToc = [
-          {title: "starting the app", url: "#_top", children: [
-              {title: "--------------------------------------------------------", url: "#-" },
+          {title: "React PWA (Progressive web app)", url: "#_top", children: [
+          ]},
+          {title: "UI \u0026amp; UX", url: "#ui-ux", children: [
+          ]},
+          {title: "Token authetication", url: "#token-authetication", children: [
           ]},
         ];
 
@@ -41,41 +44,22 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </script>
 <div class="container-fluid wm-page-content">
 <a name="_top"></a>
-<h3 id="the-app-is-a-part-of-the-mern-stack">The App is a part of the MERN-stack.</h3>
-<h3 id="pwa-progressive-web-app">PWA (Progressive web app)</h3>
-<p>has created with pwa template</p>
+<h4 id="overview">Overview</h4>
+<p>The frontend is a SPA application implemented with React.js.
+The application is a part of the MERN-stack.
+The design of the user interface is implemented with React-Bootstrap library and data visualization with the Plotly graphics library.
+Authentication is needed for the use the application.
+Requests for backend restufull API needs token in header.</p>
+<h3 id="react-pwa-progressive-web-app">React PWA (Progressive web app)</h3>
+<p>The app has created with pwa template.</p>
 <pre><code>npx create-react-app ndvi-demo --template cra-template-pwa
 </code></pre>
-<p>15.05.2024</p>
-<h1 id="starting-the-app">starting the app</h1>
-<p>login --&gt; server (tech/login.md)</p>
-<p>token dependency useEffect
-getAOIs (token) -&gt; server</p>
-<h3 id="tools-and-tests">Tools and tests</h3>
-<p>Actually Backend stuff controlled launched/triggered by frontend
-For this demo use there is limit on sentinel-hub so part of data is already inserted to database using tools of demo app.
-tools and test are not documented for this report assignment.</p>
-<h2 id="-">--------------------------------------------------------</h2>
-<h3 id="token-authetication">Token Authetication</h3>
-<p>user must be authenticated and provided token every requests to the server.</p>
-<p>Token based stack.
-For getting data from server the token is needed</p>
-<p>Admin user and reqular user
-Admin user can have tools and test for develiopin a and maintaining the system.</p>
-<p>https://fullstackopen.com/en/part4/token_authentication</p>
-<p>Työssä toteutettu fullstack on MERN-stack.</p>
-<p>Backend on toteutettu Node.js:n päällä toimivaa Express-kirjastoa käyttämällä.</p>
-<p>Tietokanta on MongoDB-palvelussa, kannan tyyppi on NoSQL.
-MongoDB-tietokannan käsittelyyn käytetään Mongoose-kirjaston metodeja.</p>
-<p>Frontend on SPA-sovellus, joka on toteutettu Reactilla.   <br/>
-Käyttöliittymän muotoilu on toteutettu  React-Bootstrapilla   <br/>
-sekä datan visualisointi Plotly-grafiikkakirjastolla.    </p>
-<p>Backendin ja frontendin väliseen kommunikointiin on käytetty socket.io -kirjastoa.   <br/>
-Backend ilmoittaa frontendille koska tietokannan päivitys alkoi ja koska se loppui,     <br/>
-näin frontedilla näytetään odotustila ja käyttöliittymän käyttö on estetty em. päivitysprosessin aikana.</p>
-<p>Sovelluksen käyttö vaatii rekisteröinnin ja kirjautumisen. Autentikointi on toteutettu token-perusteisesti.  <br/>
-Tokenit ovat JSON Web Token (JWT) -muotoisia tokeneja. Kaikki palvelupyynnät backendiin vaativat token-tunnistautumisen.      </p>
-<p>Jotta tietokanta voidaan päivittää, tarvitaan admin-oikeudet. Token sisältää tällöin myös tämän tiedon ja se tarkistetaan myös      backendin päässä, jotta päästään päivittämistä ohjaavaan express-routeen. Frontendissä kutsu backendiin on mahdollista vain admin-oikeuksilla kyseisen painikkeen ollessa käytetävissä/näkyvissä.</p>
+<h3 id="ui-ux">UI &amp; UX</h3>
+<p>User interface is mainly implemented by the React Bootstrap library.</p>
+<p><a href="https://react-bootstrap.github.io/" target="_blank">https://react-bootstrap.github.io/</a></p>
+<h3 id="token-authetication">Token authetication</h3>
+<p>Use of the application requires registration and login. Authentication is implemented on a token basis.
+Tokens are JSON Web Token (JWT) format tokens. All requests to the backend endpoints require token identification,</p>
 <br/>
 </div>
 <footer class="container-fluid wm-page-content">

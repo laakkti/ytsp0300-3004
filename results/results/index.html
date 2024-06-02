@@ -7,7 +7,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="../../img/favicon.ico" rel="shortcut icon"/>
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-<title>Results and their analysis - ytsp0300-3004 Frontend for NDVI demo for agriculture</title>
+<title>In the furure - ytsp0300-3004 Frontend for NDVI demo for agriculture</title>
 <link href="../../css/bootstrap-3.3.7.min.css" rel="stylesheet"/>
 <link href="../../css/font-awesome-4.7.0.css" rel="stylesheet"/>
 <link href="../../css/base.css" rel="stylesheet"/>
@@ -27,8 +27,16 @@
       var is_top_frame = false;
         
         var pageToc = [
-          {title: "sometimes setting yhe page size not working as expected, have to be fixed later", url: "#_top", children: [
-              {title: "Local storage/ Token", url: "#local-storage-token" },
+          {title: "Best practices", url: "#_top", children: [
+          ]},
+          {title: "TypeScript", url: "#typescript", children: [
+              {title: "Redux or Context for global variables", url: "#redux-or-context-for-global-variables" },
+          ]},
+          {title: "Local storage/ Token", url: "#local-storage-token", children: [
+          ]},
+          {title: "JavaScript Standard Style", url: "#javascript-standard-style", children: [
+          ]},
+          {title: "Naming policy", url: "#naming-policy", children: [
           ]},
         ];
 
@@ -41,36 +49,20 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </script>
 <div class="container-fluid wm-page-content">
 <a name="_top"></a>
-<h1 id="sometimes-setting-yhe-page-size-not-working-as-expected-have-to-be-fixed-later">sometimes setting yhe page size not working as expected, have to be fixed later</h1>
-<p>timing issue for useState variables
-it happens when new data is available from sentinel-hub service.</p>
-<p>dynamic code not hard codes except couple of situation
-I have kept in mind reusability, maintainability and further developability for elemets and components.</p>
-<h3 id="typescript">TypeScript</h3>
+<h2 id="best-practices">Best practices</h2>
+<p>I have kept in mind reusability, maintainability and further developability.</p>
+<h2 id="typescript">TypeScript</h2>
 <p>It would be not bad idea to use Typescript instead of Javascript</p>
 <h3 id="redux-or-context-for-global-variables">Redux or Context for global variables</h3>
-<p>For reporting and documenting</p>
-<h4 id="jsdoc">JsDoc</h4>
-<p>https://medium.com/@martink_rsa/js-docs-a-quickstart-guide-da6ce5df4a73./node_modules/jsdoc/jsdoc.js./src/services/user-service.js </p>
-<p>Vois olla imagesa date kenttä ja uuid!!!!</p>
-<p>At this point top level navbar is in app level not own component because of straigtforwared in developing not need deliver parameters and use callbacks. Ofcourse it would be nicer have it own component packet.</p>
-<p>Documenting afterwards is peretty challengingh and not very motivating.</p>
-<p>So I used AI to help for JsDoc  All the code and the documentation has been checked out with modifications,  and after that proved to be correct so why not use help of AI.</p>
-<p>UI/UX
-should fdefine breakpoisnt and or grid system of bootsrap to fit and postionin elemenst for different size of   viewports.
-it's pretty challengin to make dynamic user interface.
-should focus more in the future</p>
-<h5 id="state-management">state management</h5>
-<p>It was near to use another state management but usestate, Context Redux...</p>
-<p>liää graafiin valinta min, max, mean, std standard deviation
-mahdollisesti kaikki samaan graafiin mjutta tuleeko pylväsdiagramiissa ongelmia</p>
+<p>For state management would be handy in some deep hierarcy to use global approach.</p>
 <h2 id="local-storage-token">Local storage/ Token</h2>
-<p>Could be stored in the local storage and give expiration time
-saving the login details to local storage. Local Storage is a key-value database in the browser.
+<p>Token could be stored in the local storage and give expiration time.
+Local Storage is a key-value database in the browser.
 Values in the local storage are persisted even when the page is re-rendered.</p>
-<p>talletetaan token storageen, määritetään expiration time
-mutta kuinka tuo storage hoidetaan eli ei tarvii kirjautua joka kerta kun browseriin syötetän url
-mutta kun token menee vanhaksi niin kuinka tsekataan ja kuinka uusitaan olisiko näin että kun ei käytetän niin menee vanhaksi tietyn ajan jälkeen muuten on eloissa ja uusitaan aina kun tehdään kutsu tai tietyin aikavälein????</p>
+<h2 id="javascript-standard-style">JavaScript Standard Style</h2>
+<p><a href="https://standardjs.com/" target="_blank">https://standardjs.com//</a></p>
+<h2 id="naming-policy">Naming policy</h2>
+<p>Should use better some naming policy for variables, properties, functions, methods, components etc.</p>
 <br/>
 </div>
 <footer class="container-fluid wm-page-content">

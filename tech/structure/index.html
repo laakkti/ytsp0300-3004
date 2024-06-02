@@ -7,7 +7,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="../../img/favicon.ico" rel="shortcut icon"/>
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-<title>Structure - ytsp0300-3004 Frontend for NDVI demo for agriculture</title>
+<title>Application - ytsp0300-3004 Frontend for NDVI demo for agriculture</title>
 <link href="../../css/bootstrap-3.3.7.min.css" rel="stylesheet"/>
 <link href="../../css/font-awesome-4.7.0.css" rel="stylesheet"/>
 <link href="../../css/base.css" rel="stylesheet"/>
@@ -27,11 +27,17 @@
       var is_top_frame = false;
         
         var pageToc = [
-          {title: "Navbar", url: "#_top", children: [
+          {title: "Structure/hierarchy", url: "#_top", children: [
           ]},
-          {title: "-----------------------------------------------------", url: "#-", children: [
+          {title: "App.js", url: "#appjs", children: [
           ]},
-          {title: "Views", url: "#views", children: [
+          {title: "Navbar", url: "#navbar", children: [
+          ]},
+          {title: "Demo", url: "#demo", children: [
+              {title: "NDVI-image and data", url: "#ndvi-image-and-data" },
+              {title: "Controls", url: "#controls" },
+              {title: "ActionBar", url: "#actionbar" },
+              {title: "ImageFilm", url: "#imagefilm" },
           ]},
         ];
 
@@ -45,41 +51,13 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <div class="container-fluid wm-page-content">
 <a name="_top"></a>
 <h3 id="structurehierarchy">Structure/hierarchy</h3>
-<p>ehkä Navbar pois tuosta!!!!
-yhdistä tämä jotenkin ????</p>
-<p>SIMPLIFIED
-Hierarchy of the App /levels /pages of ths STACK</p>
-<pre><code>App/
-└── Demo/
-    ├── NDVI
-    ├── Stats
-    ├── Location
-    └── Weather
-├── Tests
-└── Tools
-</code></pre>
 <pre><code>App
 └── Navbar
     ├── Search AOI
     ├── Authentication (Login/Register)
-    └── Demo Tools Tests
-        ├── NDVI-image &amp; data
-        ├── NDVIcontrols
-        ├── ActionBar
-        │   ├── Chart
-        │   ├── Statistics
-        │   ├── CompareYears
-        │   ├── OnMap
-        │   ├── Location 
-        │   └── Weather
-        └── BottomBar
-
-</code></pre>
-<pre><code>App
-└── Navbar
     └── Demo Tools Tests About
         ├── NDVI-image &amp; data
-        ├── NDVIcontrols
+        ├── Controls
         ├── ActionBar
         │   ├── Chart
         │   ├── Statistics
@@ -90,19 +68,39 @@ Hierarchy of the App /levels /pages of ths STACK</p>
         └── ImageFilm
 </code></pre>
 <h3 id="appjs">App.js</h3>
-<p>has a navbar which can be select one of the main pages Demo tools test, admin user has these all, regular user just Demo and About
-in this document admin user choices Tool and test are not included</p>
+<p>App is a main component of the application. </p>
 <h2 id="navbar">Navbar</h2>
-<h2 id="-">-----------------------------------------------------</h2>
-<h2 id="views">Views</h2>
-<p>Views are selected from ActionBar-komponent</p>
-<h3 id="chart">chart</h3>
-<p>jotain teknistä tähän esim. mitä kirjatoja käytetty ja mitä komponentteja käytetty
-tsekkaa kyseinen filu ja sieltä tarinaa tänne</p>
-<p>plotly</p>
-<p>corresponding to
-http://127.0.0.1:8000/#usage/chart/</p>
-<p><a href="../../usage/chart/">chart</a></p>
+<p>App has a navbar which has login/logout/register functions.
+When registered user logged in she/he can select one of the main pages Demo, Tools or Test. Searching and selecting AOI (Area Of Interest ) is handled from Navbar.
+Administrator user has all features available, regular user just Demo.
+In this document Tools and Tests presentations are not included.</p>
+<p><img alt="navbar" src="../../images/navbar.png" style="display: block; margin: 0;" width="800"/>
+<img alt="navbar" src="../../images/navbar2.png" style="display: block; margin: 0;" width="800"/></p>
+<h2 id="demo">Demo</h2>
+<p>Demo is the main component for this document.
+<img alt="navbar" src="../../images/demo.png" style="display: block; margin: 0;" width="800"/></p>
+<h3 id="ndvi-image-and-data">NDVI-image and data</h3>
+<p>There is a section for NDVI-image of selected date, scale stackbar   and statistical values on the table style of component.
+<img alt="navbar" src="../../images/image_data.png" style="display: block; margin: 0;" width="300"/></p>
+<h3 id="controls">Controls</h3>
+<p>Controls for "autoplay", speed of autoplay settings slider, arrow-buttons to change date step by step, doepdowns for date and year selection. 
+<img alt="controls" src="../../images/controls.png" style="display: block; margin: 0;" width="300"/></p>
+<h3 id="actionbar">ActionBar</h3>
+<p>Views can be selected from ActionBar-component.</p>
+<p><img alt="actionbar" src="../../images/actionbar.png" style="display: block; margin: 0;" width="300"/></p>
+<h4 id="views">Views</h4>
+<ul>
+<li><a href="../../usage/chart/" target="_blank">Chart</a></li>
+<li><a href="../../usage/statistics/" target="_blank">Statistics</a></li>
+<li><a href="../../usage/compare_years/" target="_blank">Compare Years</a></li>
+<li><a href="../../usage/onmap/" target="_blank">On map</a></li>
+<li><a href="../../usage/location/" target="_blank">Location</a></li>
+<li><a href="../../usage/weather/" target="_blank">Weather</a></li>
+</ul>
+<h3 id="imagefilm">ImageFilm</h3>
+<p>In the lower right corner there is a button that opens the film view where all images are displayed as film images.
+<img alt="actionbar" src="../../images/imagefilm.png" style="display: block; margin: 0;" width="800"/></p>
+<p><a href="../../usage/film/" target="_blank">Film</a></p>
 <br/>
 </div>
 <footer class="container-fluid wm-page-content">
